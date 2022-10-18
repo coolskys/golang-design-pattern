@@ -1,11 +1,14 @@
 package decorator
 
-import "fmt"
+import (
+	"fmt"
+	"testing"
+)
 
-func ExampleDecorator() {
+func TestExampleDecorator(t *testing.T) {
 	var c Component = &ConcreteComponent{}
-	c = WarpAddDecorator(c, 10)
-	c = WarpMulDecorator(c, 8)
+	c = WrapMulDecorator(c, 8)
+	c = WrapAddDecorator(c, 10)
 	res := c.Calc()
 
 	fmt.Printf("res %d\n", res)

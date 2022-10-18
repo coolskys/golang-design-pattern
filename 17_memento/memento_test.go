@@ -1,13 +1,17 @@
 package memento
 
-func ExampleGame() {
+import (
+	"testing"
+)
+
+func TestExampleGame(t *testing.T) {
 	game := &Game{
 		hp: 10,
 		mp: 10,
 	}
 
 	game.Status()
-	progress := game.Save()
+	progress := game.Save()  // 保存到memento对象
 
 	game.Play(-2, -3)
 	game.Status()

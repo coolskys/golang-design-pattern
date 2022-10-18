@@ -1,6 +1,8 @@
 package observer
 
-func ExampleObserver() {
+import "testing"
+
+func TestExampleObserver(t *testing.T) {
 	subject := NewSubject()
 	reader1 := NewReader("reader1")
 	reader2 := NewReader("reader2")
@@ -8,7 +10,7 @@ func ExampleObserver() {
 	subject.Attach(reader1)
 	subject.Attach(reader2)
 	subject.Attach(reader3)
-
+	// 通知触发所有实例对象更新
 	subject.UpdateContext("observer mode")
 	// Output:
 	// reader1 receive observer mode

@@ -2,7 +2,7 @@ package flyweight
 
 import "testing"
 
-func ExampleFlyweight() {
+func TestExampleFlyweight(t *testing.T) {
 	viewer := NewImageViewer("image1.png")
 	viewer.Display()
 	// Output:

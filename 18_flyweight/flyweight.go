@@ -2,6 +2,9 @@ package flyweight
 
 import "fmt"
 
+/*
+享元模式从对象中剥离出不发生改变且多个实例需要的重复数据，独立出一个享元，使多个对象共享，从而节省内存以及减少对象数量。
+*/
 type ImageFlyweightFactory struct {
 	maps map[string]*ImageFlyweight
 }
@@ -17,6 +20,7 @@ func GetImageFlyweightFactory() *ImageFlyweightFactory {
 	return imageFactory
 }
 
+//不存在则创建，并保存
 func (f *ImageFlyweightFactory) Get(filename string) *ImageFlyweight {
 	image := f.maps[filename]
 	if image == nil {
@@ -44,7 +48,7 @@ func (i *ImageFlyweight) Data() string {
 }
 
 type ImageViewer struct {
-	*ImageFlyweight
+	*ImageFlyweight //享元对象
 }
 
 func NewImageViewer(filename string) *ImageViewer {

@@ -2,9 +2,12 @@ package state
 
 import "fmt"
 
+/*
+状态模式用于分离状态和行为。
+*/
 type Week interface {
-	Today()
-	Next(*DayContext)
+	Today()           // 状态
+	Next(*DayContext) // 行为
 }
 
 type DayContext struct {

@@ -1,6 +1,10 @@
 package chain
 
-func ExampleChain() {
+import (
+	"testing"
+)
+
+func TestExampleChain(t *testing.T) {
 	c1 := NewProjectManagerChain()
 	c2 := NewDepManagerChain()
 	c3 := NewGeneralManagerChain()

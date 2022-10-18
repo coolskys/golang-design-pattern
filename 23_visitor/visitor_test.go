@@ -1,10 +1,16 @@
 package visitor
 
-func ExampleRequestVisitor() {
+import (
+	"testing"
+)
+
+func TestExampleRequestVisitor(t *testing.T) {
 	c := &CustomerCol{}
+	// 添加对应的访问方式
 	c.Add(NewEnterpriseCustomer("A company"))
 	c.Add(NewEnterpriseCustomer("B company"))
 	c.Add(NewIndividualCustomer("bob"))
+	// 遍历访问
 	c.Accept(&ServiceRequestVisitor{})
 	// Output:
 	// serving enterprise customer A company
@@ -12,7 +18,7 @@ func ExampleRequestVisitor() {
 	// serving individual customer bob
 }
 
-func ExampleAnalysis() {
+func TestExampleAnalysis(t *testing.T) {
 	c := &CustomerCol{}
 	c.Add(NewEnterpriseCustomer("A company"))
 	c.Add(NewIndividualCustomer("bob"))

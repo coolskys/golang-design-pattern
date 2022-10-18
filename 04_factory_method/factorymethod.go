@@ -1,5 +1,13 @@
 package factorymethod
 
+/*
+工厂方法模式使用子类的方式延迟生成对象到子类中实现。
+
+由基类构建出多种其他类
+
+Go中不存在继承 所以使用匿名组合来实现
+*/
+
 //Operator 是被封装的实际类接口
 type Operator interface {
 	SetA(int)
@@ -7,7 +15,7 @@ type Operator interface {
 	Result() int
 }
 
-//OperatorFactory 是工厂接口
+//OperatorFactory 是工厂接口  一个接口生成另一个接口对象
 type OperatorFactory interface {
 	Create() Operator
 }
@@ -36,7 +44,7 @@ func (PlusOperatorFactory) Create() Operator {
 	}
 }
 
-//PlusOperator Operator 的实际加法实现
+//PlusOperator Operator 的实际加法实现 相当于继承了OperatorBase类
 type PlusOperator struct {
 	*OperatorBase
 }
