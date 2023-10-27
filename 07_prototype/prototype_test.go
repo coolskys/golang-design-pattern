@@ -45,6 +45,7 @@ func TestCloneFromManager(t *testing.T) {
 func init() {
 	manager = NewPrototypeManager()
 
+	// 预先设置好对象实例，通过原型管理对象进行clone或者获取
 	t1 := &Type1{
 		name: "type1",
 	}

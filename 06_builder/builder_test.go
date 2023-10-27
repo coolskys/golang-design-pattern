@@ -1,6 +1,8 @@
 package builder
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestBuilder1(t *testing.T) {
 	builder := &Builder1{}
@@ -19,5 +21,16 @@ func TestBuilder2(t *testing.T) {
 	res := builder.GetResult()
 	if res != 6 {
 		t.Fatalf("Builder2 fail expect 6 acture %d", res)
+	}
+}
+
+func TestBuildComputer(t *testing.T) {
+	host := &Host{}
+	screen := &Screen{}
+	director := NewComputerDirector(host, screen)
+	res := director.Construct("kewu", "xiaomi")
+
+	if res != "host(kewu-xiaomi-)|screen(kewu-xiaomi)" {
+		t.Fatalf("builder computer acture: %s", res)
 	}
 }

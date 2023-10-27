@@ -8,6 +8,11 @@ func TestExampleIterator(t *testing.T) {
 	var aggregate Aggregate
 	aggregate = NewNumbers(1, 10)
 	IteratorPrint(aggregate.Iterator())
+
+	aggregate = NewStrings('a', 'z')
+	IteratorPrint(aggregate.Iterator())
+
+
 	// Output:
 	// 1
 	// 2

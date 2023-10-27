@@ -7,11 +7,11 @@ Go 语言设计模式的实例代码
 ## 创建型模式
 
 * [简单工厂模式（Simple Factory）](https://github.com/senghoo/golang-design-pattern/tree/master/00_simple_factory)
+* [单例模式（Singleton）](https://github.com/senghoo/golang-design-pattern/tree/master/03_singleton)
 * [工厂方法模式（Factory Method）](https://github.com/senghoo/golang-design-pattern/tree/master/04_factory_method)
 * [抽象工厂模式（Abstract Factory）](https://github.com/senghoo/golang-design-pattern/tree/master/05_abstract_factory)
 * [创建者模式（Builder）](https://github.com/senghoo/golang-design-pattern/tree/master/06_builder)
 * [原型模式（Prototype）](https://github.com/senghoo/golang-design-pattern/tree/master/07_prototype)
-* [单例模式（Singleton）](https://github.com/senghoo/golang-design-pattern/tree/master/03_singleton)
 
 ## 结构型模式
 
@@ -36,3 +36,5 @@ Go 语言设计模式的实例代码
 * [解释器模式（Interpreter）](https://github.com/senghoo/golang-design-pattern/tree/master/19_interpreter)
 * [职责链模式（Chain of Responsibility）](https://github.com/senghoo/golang-design-pattern/tree/master/21_chain_of_responsibility)
 * [访问者模式（Visitor）](https://github.com/senghoo/golang-design-pattern/tree/master/23_visitor)
+
+## 各模式的特点、使用场景、使用示例

@@ -22,7 +22,7 @@ var (
 	once     sync.Once
 )
 
-//GetInstance 用于获取单例模式对象
+// GetInstance 用于获取单例模式对象
 func GetInstance() Singleton {
 	// 多次调用，一次执行
 	once.Do(func() {

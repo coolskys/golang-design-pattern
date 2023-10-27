@@ -40,6 +40,34 @@ func NewRebootCommand(mb *MotherBoard) *RebootCommand {
 	}
 }
 
+type PlayCommand struct {
+	mb *MotherBoard
+}
+
+func NewPlayCommand(mb *MotherBoard) *PlayCommand {
+	return &PlayCommand{
+		mb: mb,
+	}
+}
+
+func (p *PlayCommand) Execute() {
+	p.mb.PlaySound()
+}
+
+type CaculateCommand struct {
+	mb *MotherBoard
+}
+
+func NewCaculateCommand(mb *MotherBoard) *CaculateCommand {
+	return &CaculateCommand{
+		mb: mb,
+	}
+}
+
+func (c *CaculateCommand) Execute() {
+	c.mb.Caculate()
+}
+
 func (c *RebootCommand) Execute() {
 	c.mb.Reboot()
 }
@@ -52,6 +80,14 @@ func (*MotherBoard) Start() {
 
 func (*MotherBoard) Reboot() {
 	fmt.Print("system rebooting\n")
+}
+
+func (*MotherBoard) PlaySound() {
+	fmt.Printf("play sound\n")
+}
+
+func (*MotherBoard) Caculate() {
+	fmt.Print("caculate\n")
 }
 
 type Box struct {
