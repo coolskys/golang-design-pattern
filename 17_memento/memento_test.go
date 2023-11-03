@@ -11,7 +11,7 @@ func TestExampleGame(t *testing.T) {
 	}
 
 	game.Status()
-	progress := game.Save()  // 保存到memento对象
+	progress := game.Save() // 保存到memento对象
 
 	game.Play(-2, -3)
 	game.Status()

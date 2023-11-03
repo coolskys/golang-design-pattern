@@ -52,6 +52,7 @@ type ImageViewer struct {
 }
 
 func NewImageViewer(filename string) *ImageViewer {
+	// 根据名称获取享元对象
 	image := GetImageFlyweightFactory().Get(filename)
 	return &ImageViewer{
 		ImageFlyweight: image,

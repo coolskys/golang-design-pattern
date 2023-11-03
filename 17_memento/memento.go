@@ -2,7 +2,8 @@ package memento
 
 import "fmt"
 
-type Memento interface{}
+type Memento interface {
+}
 
 type Game struct {
 	hp, mp int

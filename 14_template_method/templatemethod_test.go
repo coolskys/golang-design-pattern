@@ -25,3 +25,13 @@ func TestExampleFTPDownloader(t *testing.T) {
 	// default save
 	// finish downloading
 }
+
+func TestExampleUserDaoService(t *testing.T) {
+	userDaoService := NewUserDaoService()
+	var user = &User{
+		name:     "test",
+		password: "123",
+	}
+
+	userDaoService.Add(user)
+}

@@ -1,6 +1,8 @@
 package interpreter
 
-import "testing"
+import (
+	"testing"
+)
 
 func TestInterpreter(t *testing.T) {
 	p := &Parser{}

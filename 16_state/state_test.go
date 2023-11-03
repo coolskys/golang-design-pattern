@@ -14,6 +14,7 @@ func TestExampleWeek(t *testing.T) {
 	for i := 0; i < 8; i++ {
 		todayAndNext()
 	}
+
 	// Output:
 	// Sunday
 	// Monday

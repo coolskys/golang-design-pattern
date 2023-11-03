@@ -34,6 +34,7 @@ func (t *template) save() {
 	fmt.Print("default save\n")
 }
 
+// 父类
 type HTTPDownloader struct {
 	*template
 }

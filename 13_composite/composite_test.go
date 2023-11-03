@@ -22,6 +22,7 @@ func TestExampleComposite(t *testing.T) {
 	c2.AddChild(l3)
 
 	root.Print("")
+
 	// Output:
 	// +root
 	//  +c1
