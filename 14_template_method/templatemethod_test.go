@@ -35,3 +35,11 @@ func TestExampleUserDaoService(t *testing.T) {
 
 	userDaoService.Add(user)
 }
+
+func TestExampleShapes(t *testing.T) {
+	var circle = NewCircleDrawer("blue")
+	circle.Draw()
+
+	var rec = NewRectangleDrawer("green")
+	rec.Draw()
+}

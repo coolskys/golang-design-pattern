@@ -30,7 +30,7 @@ func (r *RequestChain) SetSuccessor(m *RequestChain) {
 }
 
 func (r *RequestChain) HandleFeeRequest(name string, money int) bool {
-	//  如果本身没有权限处理，则交由连对象处理
+	//  如果本身没有权限处理，则交由下一对象处理
 	if r.Manager.HaveRight(money) {
 		return r.Manager.HandleFeeRequest(name, money)
 	}

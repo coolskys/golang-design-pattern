@@ -1,5 +1,7 @@
 package decorator
 
+import "fmt"
+
 /*
 装饰模式使用对象组合的方式动态改变或增加对象行为。
 
@@ -48,4 +50,41 @@ func WrapAddDecorator(c Component, num int) Component {
 
 func (d *AddDecorator) Calc() int {
 	return d.Component.Calc() + d.num
+}
+
+// 抽象组件
+type Shape interface {
+	draw()
+}
+
+// 具体组件
+type Circle struct{}
+
+func (c *Circle) draw() {
+	fmt.Println("画一个圆形")
+}
+
+type Rectangle struct{}
+
+func (r *Rectangle) draw() {
+	fmt.Println("画一个矩形")
+}
+
+// 抽象装饰器
+type ShapeDecorator struct {
+	decoratedShape Shape
+}
+
+func (sd *ShapeDecorator) draw() {
+	sd.decoratedShape.draw()
+}
+
+// 具体装饰器
+type RedShapeDecorator struct {
+	ShapeDecorator
+}
+
+func (rsd *RedShapeDecorator) draw() {
+	rsd.decoratedShape.draw()
+	fmt.Println("填充红色")
 }

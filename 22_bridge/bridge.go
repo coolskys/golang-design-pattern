@@ -23,7 +23,7 @@ type MessageImplementer interface {
 type MessageSMS struct{}
 
 //桥接方法返回实现类
-func ViaSMS() MessageImplementer {
+func NewSMSSender() MessageImplementer {
 	return &MessageSMS{}
 }
 
@@ -33,7 +33,7 @@ func (*MessageSMS) Send(text, to string) {
 
 type MessageEmail struct{}
 
-func ViaEmail() MessageImplementer {
+func NewEmailSender() MessageImplementer {
 	return &MessageEmail{}
 }
 
