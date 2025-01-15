@@ -4,6 +4,7 @@ import "testing"
 
 func TestMediator(t *testing.T) {
 	mediator := GetMediatorInstance()
+
 	mediator.CD = &CDDriver{}
 	mediator.CPU = &CPU{}
 	mediator.Video = &VideoCard{}

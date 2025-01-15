@@ -1,9 +1,5 @@
 # Go 语言设计模式
 
-[![Build Status](https://travis-ci.org/senghoo/golang-design-pattern.svg?branch=master)](https://travis-ci.org/senghoo/golang-design-pattern)
-
-Go 语言设计模式的实例代码
-
 ## 创建型模式
 
 * [简单工厂模式（Simple Factory）](https://github.com/senghoo/golang-design-pattern/tree/master/00_simple_factory)
@@ -39,27 +35,27 @@ Go 语言设计模式的实例代码
 
 ## 模式使用口诀
 
-单例模式（Singleton）：唯一实例，全局存储。
-工厂模式（Factory）：封装创建，统一交付。
-抽象工厂模式（Abstract Factory）：一族产品，共同创造。
-建造者模式（Builder）：步骤分明，构建对象。
-原型模式（Prototype）：克隆复制，快速生成。
-适配器模式（Adapter）：接口转换，协作无碍。
-桥接模式（Bridge）：抽象实现，解耦衔接。
-装饰器模式（Decorator）：增强功能，动态包裹。
-组合模式（Composite）：整体部分，统一对待。
-外观模式（Facade）：简化接口，易于使用。
-享元模式（Flyweight）：共享资源，节约开销。
-代理模式（Proxy）：控制访问，安全可靠。
-策略模式（Strategy）：算法替换，灵活应对。
-模板方法模式（Template Method）：骨架固定，细节自由。
-观察者模式（Observer）：消息订阅，及时通知。
-迭代器模式（Iterator）：遍历集合，统一访问。
-职责链模式（Chain of Responsibility）：责任传递，按需处理。
-命令模式（Command）：行为封装，可撤销执行。
-备忘录模式（Memento）：状态保存，回溯可行。
-状态模式（State）：状态切换，行为变化。
-访问者模式（Visitor）：双重分派，动态操作。
-中介者模式（Mediator）：解耦合，统一调度。
-解释器模式（Interpreter）：语法解析，执行操作。
-亨元模式（Co享元模式）：共享细粒，节约存储。
+* 单例模式（Singleton）：唯一实例，全局存储。
+* 工厂模式（Factory）：封装创建，统一交付。
+* 抽象工厂模式（Abstract Factory）：一族产品，共同创造。
+* 建造者模式（Builder）：步骤分明，构建对象。
+* 原型模式（Prototype）：克隆复制，快速生成。
+* 适配器模式（Adapter）：接口转换，协作无碍。
+* 桥接模式（Bridge）：抽象实现，解耦衔接。
+* 装饰器模式（Decorator）：增强功能，动态包裹。
+* 组合模式（Composite）：整体部分，统一对待。
+* 外观模式（Facade）：简化接口，易于使用。
+* 享元模式（Flyweight）：共享资源，节约开销。
+* 代理模式（Proxy）：控制访问，安全可靠。
+* 策略模式（Strategy）：算法替换，灵活应对。
+* 模板方法模式（Template Method）：骨架固定，细节自由。
+* 观察者模式（Observer）：消息订阅，及时通知。
+* 迭代器模式（Iterator）：遍历集合，统一访问。
+* 职责链模式（Chain of Responsibility）：责任传递，按需处理。
+* 命令模式（Command）：行为封装，可撤销执行。
+* 备忘录模式（Memento）：状态保存，回溯可行。
+* 状态模式（State）：状态切换，行为变化。
+* 访问者模式（Visitor）：双重分派，动态操作。
+* 中介者模式（Mediator）：解耦合，统一调度。
+* 解释器模式（Interpreter）：语法解析，执行操作。
+* 亨元模式（Co享元模式）：共享细粒，节约存储。
